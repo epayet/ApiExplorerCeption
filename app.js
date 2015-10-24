@@ -8,7 +8,7 @@ function getApiDescription() {
         apiInfo: {
             "title": "APIExplorerCeption",
             "description": "This is the API explorer for the ... API Explorer! You can have POST, DELETE, etc. methods too.",
-            "url": "http://localhost:8082"
+            "url": "https://blooming-oasis-8128.herokuapp.com"
         },
         resources: [{
             "name": "ApiInfo",
