@@ -1,0 +1,74 @@
+{
+  "apiInfo": {
+    "title": "APIExplorerCeption",
+    "description": "This is the API explorer for the ... API Explorer! You can have POST, DELETE, etc. methods too.",
+    "url": "https://blooming-oasis-8128.herokuapp.com"
+  },
+  "resources": [{
+    "name": "ApiInfo",
+    "description": "Information about this API",
+    "methods": [{
+      "verb": "get",
+      "path": "/api/apiInfo",
+      "description": "Get information about this API",
+      "result": [{
+        "name": "title",
+        "description": "The title of the api",
+        "type": "string"
+      }, {
+        "name": "description",
+        "description": "The description of the API",
+        "type": "string"
+      }, {
+        "name": "url",
+        "description": "The url of the API",
+        "type": "string"
+      }]
+    }]
+  }, {
+    "name": "Resources",
+    "description": "Information about the resources of the API. Contains an array of resource information needed to generate this file.",
+    "methods": [{
+      "verb": "get",
+      "path": "/api/resources",
+      "description": "Get every resources",
+      "result": [{
+        "name": "name",
+        "description": "The name of the resource",
+        "type": "string"
+      }, {
+        "name": "description",
+        "description": "The description of the resource",
+        "type": "string"
+      }, {
+        "name": "methods",
+        "description": "The methods available for the resource (GET, POST, etc.). For each you can define the verb, the path, the parameters needed (body or query), and the result documentation.",
+        "type": "string"
+      }]
+    }, {
+      "verb": "get",
+      "path": "/api/resources/{resourceName}",
+      "description": "Get a specific resource",
+      "parameters": [{
+        "name": "resourceName",
+        "description": "The name of the resource",
+        "parameterType": "id",
+        "required": true,
+        "exampleValue": "ApiInfo"
+      }],
+      "result": [{
+        "name": "name",
+        "description": "The name of the resource",
+        "type": "string"
+      }, {
+        "name": "description",
+        "description": "The description of the resource",
+        "type": "string"
+      }, {
+        "name": "methods",
+        "description": "The methods available for the resource (GET, POST, etc.). For each you can define the verb, the path, the parameters needed (body or query), and the result documentation.",
+        "type": "string"
+      }]
+    }]
+  }]
+}
