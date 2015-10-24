@@ -1,7 +1,7 @@
 var ApiExplorer = require("api-explorer");
 
 var apiExplorer = new ApiExplorer(getApiDescription());
-apiExplorer.startServer({port: 8082});
+apiExplorer.startServer({port: process.env.PORT || 8082});
 
 function getApiDescription() {
     return {
